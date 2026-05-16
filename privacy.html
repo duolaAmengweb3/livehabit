@@ -21,11 +21,15 @@
 <p>LiveHabit ("we", "our", "the app") respects your privacy. This policy explains what information we collect, how we use it, and your choices.</p>
 
 <h2>What We Collect</h2>
-<p><strong>Habits and Completions.</strong> When you create a habit and mark it complete, the app stores the habit name, your chosen icon, color, category, target, and the date/time of each completion locally on your device. This data is also synced to your private iCloud account so it appears on your other Apple devices.</p>
+<p><strong>Habits and Completions.</strong> When you create a habit and mark it complete, the app stores the habit name, your chosen icon, color, category, identity statement, target, and the date/time of each completion locally on your device. This data is also synced to your private iCloud account so it appears on your other Apple devices.</p>
+
+<p><strong>AI Insights.</strong> When enabled, LiveHabit generates weekly observations about your habits 100% on your device. On iOS 26+ devices we use Apple's on-device Foundation Models. On older iOS we use a rule-based pattern engine. Either way, your habit data never leaves your device for insight generation.</p>
+
+<p><strong>Anonymous Cohort.</strong> When enabled, LiveHabit sends a one-way SHA-256 hash of each habit name + identity statement to our server (Cloudflare Workers). The server uses this hash to count how many people anonymously track similar habits. We <strong>cannot</strong> reverse the hash to recover habit text. We <strong>do not</strong> send any user identifier, IP address, device ID, name, email, or other personally identifying data with the hash. You can disable cohort participation anytime in Settings.</p>
 
 <p><strong>Apple Health data (optional).</strong> If you grant permission, LiveHabit reads step count, workout sessions, and mindful sessions from Apple Health to auto-complete matching habits. We <strong>only read</strong> from Apple Health. We <strong>never write</strong> any data back to Health. We never share this data with anyone.</p>
 
-<p><strong>Device identifiers.</strong> A randomly generated device identifier is stored locally and in iCloud to resolve sync conflicts across multiple devices. This identifier is not personally identifying.</p>
+<p><strong>Device identifiers.</strong> A randomly generated device identifier is stored locally and in iCloud to resolve sync conflicts across multiple devices. This identifier is not personally identifying and is never sent to LiveHabit servers.</p>
 
 <h2>What We Do NOT Collect</h2>
 <ul>
@@ -35,6 +39,7 @@
 <li>We do not use advertising frameworks. The app shows no ads.</li>
 <li>We do not track you across other apps or websites.</li>
 <li>We do not share your data with any third party.</li>
+<li>The cohort server does not log IP addresses or other identifiers.</li>
 </ul>
 
 <h2>Where Your Data Lives</h2>
@@ -42,6 +47,7 @@
 <li>Local device storage (SwiftData)</li>
 <li>Your private Apple iCloud (CloudKit), accessible only to you</li>
 <li>Optional iCloud Drive backup file (only if you explicitly export)</li>
+<li>Cohort server (Cloudflare KV): only anonymous habit hashes + counts</li>
 </ul>
 
 <h2>In-App Purchase</h2>
@@ -55,6 +61,7 @@
 <li>Delete all your data at any time by deleting the app and disabling iCloud sync in iOS Settings.</li>
 <li>Export your habit data to CSV or JSON from Settings → Data → Export.</li>
 <li>Disable Apple Health access in iOS Settings → Health → Data Access &amp; Devices → LiveHabit.</li>
+<li>Opt out of anonymous cohort in Settings → Cohort.</li>
 </ul>
 
 <h2>Changes to This Policy</h2>

@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Privacy Policy</h1>
-<p class="effective">Effective date: 2026-05-16</p>
+<p class="effective">Effective date: 2026-05-22</p>
 
 <p>LiveHabit ("we", "our", "the app") respects your privacy. This policy explains what information we collect, how we use it, and your choices.</p>
 
@@ -27,7 +27,7 @@
 
 <p><strong>Anonymous Cohort.</strong> When enabled, LiveHabit sends a one-way SHA-256 hash of each habit name + identity statement to our server (Cloudflare Workers). The server uses this hash to count how many people anonymously track similar habits. We <strong>cannot</strong> reverse the hash to recover habit text. We <strong>do not</strong> send any user identifier, IP address, device ID, name, email, or other personally identifying data with the hash. You can disable cohort participation anytime in Settings.</p>
 
-<p><strong>Apple Health data (optional).</strong> If you grant permission, LiveHabit reads step count, workout sessions, and mindful sessions from Apple Health to auto-complete matching habits. We <strong>only read</strong> from Apple Health. We <strong>never write</strong> any data back to Health. We never share this data with anyone.</p>
+<p><strong>Motion &amp; Fitness (optional).</strong> If you grant permission in Settings → Motion &amp; Fitness, LiveHabit reads today's step count from your device's motion coprocessor (Apple's Core Motion framework) to auto-complete habits whose names contain words like walk, step, run, jog, exercise, or move. LiveHabit <strong>does not</strong> access Apple Health and does not read any other health, medical, or workout data. The step count is read on-device and is never sent off-device.</p>
 
 <p><strong>Device identifiers.</strong> A randomly generated device identifier is stored locally and in iCloud to resolve sync conflicts across multiple devices. This identifier is not personally identifying and is never sent to LiveHabit servers.</p>
 
@@ -60,7 +60,7 @@
 <ul>
 <li>Delete all your data at any time by deleting the app and disabling iCloud sync in iOS Settings.</li>
 <li>Export your habit data to CSV or JSON from Settings → Data → Export.</li>
-<li>Disable Apple Health access in iOS Settings → Health → Data Access &amp; Devices → LiveHabit.</li>
+<li>Disable Motion &amp; Fitness access in iOS Settings → Privacy &amp; Security → Motion &amp; Fitness → LiveHabit, or turn the Motion &amp; Fitness toggle off in LiveHabit's Settings.</li>
 <li>Opt out of anonymous cohort in Settings → Cohort.</li>
 </ul>
 
